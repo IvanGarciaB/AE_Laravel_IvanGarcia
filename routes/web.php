@@ -1,7 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductoController_IG;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductoController_IG::class, 'index'])->name('productos_ig.index');
+Route::get('/productos/{id}', [ProductoController_IG::class, 'show'])->name('productos_ig.show');
