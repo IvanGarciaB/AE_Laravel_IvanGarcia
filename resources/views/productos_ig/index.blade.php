@@ -8,7 +8,7 @@
     @foreach ($productos as $producto)
         <li>
             <a href="{{ route('productos_ig.show', $producto->id) }}">
-                {{ $producto->nombre }} - ${{ $producto->precio }}
+                {{ $producto->nombre }} - €{{ $producto->precio }}
             </a>
         </li>
     @endforeach
